@@ -22,7 +22,15 @@ void make_array(int *** a)
 	(*a)[2][2] = 330;
 
 };
+void free_array(int ** p)
+{
+	free(p[0]);
+	free(p[1]);
+	free(p[2]);
 
+	free(p);
+};
+/*
 void free_array(int *** p)
 {
 	free((*p)[0]);
@@ -31,7 +39,7 @@ void free_array(int *** p)
 
 	free(*p);
 };
-
+*/
 int main(void)
 {
 	int** a = NULL;
@@ -54,7 +62,7 @@ int main(void)
 	printf("a[2][1] = %d\n", a[2][1]);
 	printf("a[2][2] = %d\n", a[2][2]);
 
-	free_array(&a);
+	free_array(a);
 
 	return 0;
 }
