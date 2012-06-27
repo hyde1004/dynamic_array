@@ -36,6 +36,9 @@ int main(void)
 	printf("a[2][1] = %d\n", a[2][1]);
 	printf("a[2][2] = %d\n", a[2][2]);
 
-
+	free(a[0]);
+	free(a[1]);
+	free(a[2]);
+	
 	return 0;
 }
