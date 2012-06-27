@@ -14,5 +14,7 @@ int main(void)
 	printf("a[1] = %d\n", a[1]);
 	printf("a[2] = %d\n", a[2]);
 
+	free(a);
+	
 	return 0;
 }
